@@ -1,0 +1,6 @@
+beautifulsoup4
+requests
+regex
+transformers
+rotobuf==3.20.*
+flask
