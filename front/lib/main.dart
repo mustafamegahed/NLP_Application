@@ -21,7 +21,7 @@ final dio = Dio();
 void request(url) async {
   Response response;
   response = await dio.post(
-      'https://e79a-2a00-f29-290-1aa0-21b1-bfca-d47f-8204.in.ngrok.io/summarize-webpage',
+      'https://d927-2a00-f29-290-9c4a-519a-f1d6-dc28-fc60.ngrok.io/summarize-webpage',
       data: {'url': url});
   print(response.data.toString());
 }
