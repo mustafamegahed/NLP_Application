@@ -1,17 +1,3 @@
-# Developing a single use case of the final application to test the development process
-# webpage_to_text then processing text then summarization
-
-# Installing the required packages for webpage_to_text
-# !pip install beautifulsoup4 requests
-
-# Installing the required packages for text processing
-# !pip install regex
-
-# Installing the required packages for summarization ???????????
-# !pip install transformers
-# !pip install protobuf==3.20.*
-
-
 # Importing the required packages for webpage_to_text
 from bs4 import BeautifulSoup
 import requests
@@ -138,9 +124,6 @@ class Item(BaseModel):
 
 #### API ####
 #############
-
-# Required installations
-# !pip install flask
 
 # Import required modules
 from fastapi import FastAPI, Path
