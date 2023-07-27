@@ -21,7 +21,7 @@ final dio = Dio();
 void request(url) async {
   Response response;
   response = await dio.post(
-      'https://d927-2a00-f29-290-9c4a-519a-f1d6-dc28-fc60.ngrok.io/summarize-webpage',
+      'https://92fc-2a00-f29-290-9c4a-d10-5335-db3-5558.ngrok.io/summarize-webpage',
       data: {'url': url});
   print(response.data.toString());
 }
@@ -165,6 +165,30 @@ class _WebPagePage extends State<WebPagePage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () {
+                  Card(
+                    elevation: 5,
+                    color: Colors.grey[300],
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    margin: const EdgeInsets.all(20),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const WebPagePage()));
+                      },
+                      child: const SizedBox(
+                        width: double.infinity,
+                        height: 100,
+                        child: Center(
+                            child: Text('Web Page', textScaleFactor: 1.3)),
+                      ),
+                    ),
+                  );
                   print(myController.text);
                   request(myController.text);
                 },
